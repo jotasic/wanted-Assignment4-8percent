@@ -6,6 +6,12 @@
   -  [8퍼센트 사이트](https://8percent.kr/)
   - [원티드 채용 링크](https://www.wanted.co.kr/wd/64695)
 
+## 과제 후기
+- https://velog.io/@burnkim61/프리온보딩-과제-4
+
+## 팀 Repository
+- https://github.com/Wanted-Preonboarding-Backend-1st-G5/Assignment4
+
 ## Members
 |이름   |github                   |담당 기능|
 |-------|-------------------------|--------------------|
@@ -17,6 +23,10 @@
 
 ## 과제 내용
 
+<details>
+  <summary><b>과제 내용 자세히 보기</b></summary>
+<div markdown="1">
+	
 ### [필수 포함 사항]
 
 - READ.ME 작성
@@ -82,6 +92,8 @@
 - Functional Test 의 구현 (입금, 조회, 출금에 대한 시나리오 테스트)
 - 거래내역이 1억건을 넘어갈 때에 대한 고려
     - 이를 고려하여 어떤 설계를 추가하셨는지를 README에 남겨 주세요.
+	
+	</details>
 
 ## 사용 기술 및 tools
 > - Back-End :  <img src="https://img.shields.io/badge/Python 3.8-3776AB?style=for-the-badge&logo=Python&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/Django 3.2-092E20?style=for-the-badge&logo=Django&logoColor=white"/>&nbsp;<img src="https://img.shields.io/badge/sqlite-0064a5?style=for-the-badge&logo=sqlite&logoColor=white"/>&nbsp;
@@ -98,23 +110,24 @@
 [링크-Swagger](http://18.188.189.173:8031/swagger/)
 
 ## 구현 기능
-**1. 회원가입, 로그인, 로그아웃**
+
+**1. 거래 내역 조회 API** - 🙋‍♂️ 담당기능
+  - 계좌의 소유주만 거래 내역 조회 가능
+  - 입금, 출금만 선택해서 필터링
+  - 거래일시별로 조회기간을 정해서 필터링, Pagination	
+	
+**2. 회원가입, 로그인, 로그아웃**
  - 커스텀 유저모델 생성, username 대신 email을 사용
  - rest_auth 사용, 로그인 시 토큰 생성
 
-**2. 입급, 출금 API**
+**3. 입급, 출금 API**
  - 계좌의 소유주만 계좌에서 입금, 출금 
  - 잔액을 넘어서 출금 요청을 하면 에러 메세지 반환
 
-**3. 계좌 생성 및 계좌List API**
+**4. 계좌 생성 및 계좌List API**
 - 로그인한 유저만 접근 및 생성 가능
 - 자신의 계좌만 List로 보여준다.
 
-**4. 거래 내역 조회 API**
-  - 계좌의 소유주만 거래 내역 조회 가능
-  - 입금, 출금만 선택해서 필터링
-  - 거래일시별로 조회기간을 정해서 필터링, Pagination
-  
 
 ## 거래내역이 1억건을 넘어갈 때에 대한 고려
 ### 개요
@@ -233,6 +246,11 @@ sqlite 캐시 사이즈를 늘려봤습니다.
 
 
 ## 설치 및 실행 방법
+	
+<details>
+  <summary><b>설치 및 실행 방법 자세히 보기</b></summary>
+<div markdown="1">	
+	
 ###  Local 개발 및 테스트용
 
 1. 해당프로젝트를 clone 하고, 프로젝트 폴더로 들어간다.
@@ -291,6 +309,8 @@ sqlite 캐시 사이즈를 늘려봤습니다.
     docker-compose -f docker-compose-deploy.yml up -d
     ```
 
+</details>
+	
 ## 폴더 구조
 
 ```bash
@@ -346,13 +366,6 @@ sqlite 캐시 사이즈를 늘려봤습니다.
  ┣ 📜requirements.txt
  ┗ 📜test_functional_test.py
 ```
-
-## TIL정리 (Blog)
-- 김태우 : http://velog.io/@burnkim61/프리온보딩-과제-4
-- 고유영 :
-- 박지원 : https://yesjiwon5304.tistory.com/36
-- 최신혁 :
-- 박세원 :
 
 # Reference
 이 프로젝트는 원티드x위코드 백엔드 프리온보딩 과제 일환으로 8퍼센트에서 출제한 과제를 기반으로 만들었습니다.
